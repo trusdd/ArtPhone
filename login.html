@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход - ArtPhone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="logo">ArtPhone</a>
+          <ul class="nav-menu">
+            <li>
+              <a href="profile.html" id="profileLink" style="display: none"
+                >Личный кабинет</a
+              >
+            </li>
+            <li><a href="login.html" id="loginLink">Вход</a></li>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Поиск iPhone..."
+            />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="auth-container">
+      <div class="auth-card">
+        <h1>Вход в аккаунт</h1>
+        <form class="auth-form" id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-group checkbox">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Запомнить меня</label>
+          </div>
+          <button type="submit" class="auth-btn">Войти</button>
+        </form>
+        <div class="auth-links">
+          <a href="register.html">Нет аккаунта? Зарегистрироваться</a>
+          <a href="#">Забыли пароль?</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>ArtPhone</h3>
+            <p>Официальный магазин iPhone в России</p>
+            <p>г. Москва, ул. Тверская, д. 25</p>
+          </div>
+          <div class="footer-links">
+            <h4>Меню</h4>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Контакты</h4>
+            <p>+7 (495) 123-45-67</p>
+            <p>info@artphone.ru</p>
+            <p>Пн-Вс: 10:00 - 21:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

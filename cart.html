@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина - ArtPhone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="logo">ArtPhone</a>
+          <ul class="nav-menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="login.html" id="loginLink">Вход</a></li>
+            <li>
+              <a href="profile.html" id="profileLink" style="display: none"
+                >Личный кабинет</a
+              >
+            </li>
+          </ul>
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Поиск iPhone..."
+            />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="cart-page">
+      <div class="container">
+        <h1 class="cart-title">Корзина</h1>
+
+        <div class="cart-content">
+          <div class="cart-items-container">
+            <div class="cart-items-header">
+              <div class="cart-header-product">Товар</div>
+              <div class="cart-header-price">Цена</div>
+              <div class="cart-header-quantity">Количество</div>
+              <div class="cart-header-total">Итого</div>
+              <div class="cart-header-remove"></div>
+            </div>
+            <div id="cartItemsList" class="cart-items-list">
+              <!-- Товары будут загружаться через JS -->
+            </div>
+          </div>
+
+          <div class="cart-summary">
+            <h3>Итого</h3>
+            <div class="summary-row">
+              <span>Товаров:</span>
+              <span id="cartTotalItems">0</span>
+            </div>
+            <div class="summary-row">
+              <span>Сумма:</span>
+              <span id="cartTotalSum">0 ₽</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+              Оформить заказ
+            </button>
+            <a href="catalog.html" class="continue-shopping"
+              >Продолжить покупки</a
+            >
+          </div>
+        </div>
+
+        <div class="empty-cart" id="emptyCart" style="display: none">
+          <div class="empty-cart-icon">🛒</div>
+          <h2>Корзина пуста</h2>
+          <p>Добавьте товары из каталога</p>
+          <a href="catalog.html" class="btn btn-primary">Перейти в каталог</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>ArtPhone</h3>
+            <p>Официальный магазин iPhone в России</p>
+            <p>г. Москва, ул. Тверская, д. 25</p>
+          </div>
+          <div class="footer-links">
+            <h4>Меню</h4>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Контакты</h4>
+            <p>+7 (495) 123-45-67</p>
+            <p>info@artphone.ru</p>
+            <p>Пн-Вс: 10:00 - 21:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

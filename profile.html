@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет - ArtPhone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="logo">ArtPhone</a>
+          <ul class="nav-menu">
+            <li>
+              <a href="profile.html" id="profileLink" style="display: none"
+                >Личный кабинет</a
+              >
+            </li>
+            <li><a href="login.html" id="loginLink">Вход</a></li>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Поиск iPhone..."
+            />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="profile-container">
+      <div class="profile-sidebar">
+        <div class="profile-avatar">
+          <div class="avatar-placeholder" id="avatarPlaceholder">И</div>
+          <h3 id="profileName">Иван Петров</h3>
+          <p id="profileEmail">ivan@email.com</p>
+        </div>
+        <ul class="profile-menu">
+          <li class="active" data-tab="orders">Мои заказы</li>
+          <li data-tab="data">Личные данные</li>
+          <li data-tab="addresses">Адреса доставки</li>
+          <li data-tab="wishlist">Избранное</li>
+          <li data-tab="logout" id="logoutBtn">Выйти</li>
+        </ul>
+      </div>
+
+      <div class="profile-content">
+        <div class="profile-tab active" id="ordersTab">
+          <h2>Мои заказы</h2>
+          <div class="orders-list" id="ordersList">
+            <div class="order-card">
+              <div class="order-header">
+                <span class="order-number">Заказ №12345</span>
+                <span class="order-date">25 февраля 2026</span>
+                <span class="order-status status-delivered">Доставлен</span>
+              </div>
+              <div class="order-items">
+                <div class="order-item">
+                  <img
+                    src="https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"
+                    alt="iPhone 17 Pro"
+                  />
+                  <div class="order-item-info">
+                    <h4>iPhone 17 Pro</h4>
+                    <p>Количество: 1</p>
+                    <p>159 990 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="order-footer">
+                <span>Итого: 159 990 ₽</span>
+                <button class="btn btn-outline">Повторить заказ</button>
+              </div>
+            </div>
+
+            <div class="order-card">
+              <div class="order-header">
+                <span class="order-number">Заказ №12344</span>
+                <span class="order-date">20 февраля 2026</span>
+                <span class="order-status status-processing">В обработке</span>
+              </div>
+              <div class="order-items">
+                <div class="order-item">
+                  <img
+                    src="https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"
+                    alt="iPhone 16"
+                  />
+                  <div class="order-item-info">
+                    <h4>iPhone 16</h4>
+                    <p>Количество: 1</p>
+                    <p>99 990 ₽</p>
+                  </div>
+                </div>
+              </div>
+              <div class="order-footer">
+                <span>Итого: 99 990 ₽</span>
+                <button class="btn btn-outline">Отследить заказ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-tab" id="dataTab">
+          <h2>Личные данные</h2>
+          <form class="profile-form" id="profileForm">
+            <div class="form-group">
+              <label for="profileNameInput">Имя</label>
+              <input type="text" id="profileNameInput" value="Иван Петров" />
+            </div>
+            <div class="form-group">
+              <label for="profileEmailInput">Email</label>
+              <input
+                type="email"
+                id="profileEmailInput"
+                value="ivan@email.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="profilePhoneInput">Телефон</label>
+              <input
+                type="tel"
+                id="profilePhoneInput"
+                value="+7 (999) 123-45-67"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Сохранить изменения
+            </button>
+          </form>
+
+          <h3>Смена пароля</h3>
+          <form class="profile-form" id="passwordForm">
+            <div class="form-group">
+              <label for="currentPassword">Текущий пароль</label>
+              <input type="password" id="currentPassword" />
+            </div>
+            <div class="form-group">
+              <label for="newPassword">Новый пароль</label>
+              <input type="password" id="newPassword" />
+            </div>
+            <div class="form-group">
+              <label for="confirmNewPassword">Подтверждение пароля</label>
+              <input type="password" id="confirmNewPassword" />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Изменить пароль
+            </button>
+          </form>
+        </div>
+
+        <div class="profile-tab" id="addressesTab">
+          <h2>Адреса доставки</h2>
+          <div class="addresses-list" id="addressesList">
+            <div class="address-card">
+              <div class="address-card-header">
+                <h4>Основной адрес</h4>
+                <span class="address-badge">По умолчанию</span>
+              </div>
+              <p>г. Москва, ул. Тверская, д. 25, кв. 123</p>
+              <p>Иван Петров, +7 (999) 123-45-67</p>
+              <div class="address-actions">
+                <button class="btn btn-outline small">Редактировать</button>
+                <button class="btn btn-outline small">Удалить</button>
+              </div>
+            </div>
+
+            <div class="address-card">
+              <div class="address-card-header">
+                <h4>Рабочий адрес</h4>
+              </div>
+              <p>г. Москва, ул. Ленина, д. 10, офис 505</p>
+              <p>Иван Петров, +7 (999) 123-45-67</p>
+              <div class="address-actions">
+                <button class="btn btn-outline small">Редактировать</button>
+                <button class="btn btn-outline small">Удалить</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="addAddressBtn">
+            + Добавить новый адрес
+          </button>
+        </div>
+
+        <div class="profile-tab" id="wishlistTab">
+          <h2>Избранное</h2>
+          <div class="wishlist-grid" id="wishlistGrid">
+            <div class="wishlist-item">
+              <img
+                src="https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"
+                alt="iPhone 17 Pro"
+              />
+              <h4>iPhone 17 Pro</h4>
+              <p class="price">159 990 ₽</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-product='{"id":"iphone17pro","name":"iPhone 17 Pro","price":"159 990 ₽","image":"https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"}'
+              >
+                В корзину
+              </button>
+              <button class="wishlist-remove">×</button>
+            </div>
+            <div class="wishlist-item">
+              <img
+                src="https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"
+                alt="iPhone 16"
+              />
+              <h4>iPhone 16</h4>
+              <p class="price">99 990 ₽</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-product='{"id":"iphone16","name":"iPhone 16","price":"99 990 ₽","image":"https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"}'
+              >
+                В корзину
+              </button>
+              <button class="wishlist-remove">×</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>ArtPhone</h3>
+            <p>Официальный магазин iPhone в России</p>
+            <p>г. Москва, ул. Тверская, д. 25</p>
+          </div>
+          <div class="footer-links">
+            <h4>Меню</h4>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Контакты</h4>
+            <p>+7 (495) 123-45-67</p>
+            <p>info@artphone.ru</p>
+            <p>Пн-Вс: 10:00 - 21:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
