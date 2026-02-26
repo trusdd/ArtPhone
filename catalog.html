@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин iPhone "ArtPhone" - Каталог</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="logo">ArtPhone</a>
+          <ul class="nav-menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html" class="active">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="login.html" id="loginLink">Вход</a></li>
+            <li>
+              <a href="profile.html" id="profileLink" style="display: none"
+                >Личный кабинет</a
+              >
+            </li>
+          </ul>
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Поиск iPhone..."
+            />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="catalog">
+      <h1>Каталог iPhone</h1>
+      <div class="catalog-grid">
+        <div
+          class="catalog-item"
+          data-name="iPhone 17"
+          data-price="129990"
+          data-rating="4.9"
+        >
+          <a href="product-iphone17.html">
+            <img
+              src="https://resizer.mail.ru/p/73978d8a-5f93-5634-bdf9-01d76ca5589f/AQAKbFx8-a7PInIUF9LlnEZ2rU8B457mnO8qT2ZjKO0-xTNW6Iz6_iDA2ikvDQYScy-TRFu4k7B5F46i29vbekqvHkU.jpg"
+              alt="iPhone 17"
+            />
+            <h3>iPhone 17</h3>
+            <p>129 990 ₽</p>
+            <div class="rating">★★★★★ 4.9/5</div>
+          </a>
+          <button
+            class="btn btn-secondary add-to-cart"
+            data-product='{"id":"iphone17","name":"iPhone 17","price":"129 990 ₽","image":"https://resizer.mail.ru/p/73978d8a-5f93-5634-bdf9-01d76ca5589f/AQAKbFx8-a7PInIUF9LlnEZ2rU8B457mnO8qT2ZjKO0-xTNW6Iz6_iDA2ikvDQYScy-TRFu4k7B5F46i29vbekqvHkU.jpg"}'
+          >
+            В корзину
+          </button>
+        </div>
+        <div
+          class="catalog-item"
+          data-name="iPhone 17 Pro"
+          data-price="159990"
+          data-rating="4.9"
+        >
+          <a href="product-iphone17pro.html">
+            <img
+              src="https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"
+              alt="iPhone 17 Pro"
+            />
+            <h3>iPhone 17 Pro</h3>
+            <p>159 990 ₽</p>
+            <div class="rating">★★★★★ 4.9/5</div>
+          </a>
+          <button
+            class="btn btn-secondary add-to-cart"
+            data-product='{"id":"iphone17pro","name":"iPhone 17 Pro","price":"159 990 ₽","image":"https://twigo.ru/center/iblock/5f9/6m2fcxghq6ilra6xnq5ftx32721ii1or/ifdx9jprifkl2ldfzmn2m18n91wg8mim.jpg"}'
+          >
+            В корзину
+          </button>
+        </div>
+        <div
+          class="catalog-item"
+          data-name="iPhone 16"
+          data-price="99990"
+          data-rating="4.8"
+        >
+          <a href="product-iphone16.html">
+            <img
+              src="https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"
+              alt="iPhone 16"
+            />
+            <h3>iPhone 16</h3>
+            <p>99 990 ₽</p>
+            <div class="rating">★★★★☆ 4.8/5</div>
+          </a>
+          <button
+            class="btn btn-secondary add-to-cart"
+            data-product='{"id":"iphone16","name":"iPhone 16","price":"99 990 ₽","image":"https://tatphone.ru/wp-content/uploads/2025/06/13367471-8.jpg"}'
+          >
+            В корзину
+          </button>
+        </div>
+        <div
+          class="catalog-item"
+          data-name="iPhone 16 Pro"
+          data-price="139990"
+          data-rating="4.9"
+        >
+          <a href="product-iphone16pro.html">
+            <img
+              src="https://cdn.mos.cms.futurecdn.net/BUjnMt43qGRgpsaBo2nvcC.jpg"
+              alt="iPhone 16 Pro"
+            />
+            <h3>iPhone 16 Pro</h3>
+            <p>139 990 ₽</p>
+            <div class="rating">★★★★★ 4.9/5</div>
+          </a>
+          <button
+            class="btn btn-secondary add-to-cart"
+            data-product='{"id":"iphone16pro","name":"iPhone 16 Pro","price":"139 990 ₽","image":"https://applegod.ru/upload/iblock/876/y4mxa4utp7mj9ujt3x55jk4x1iq8wbf4.jpeg"}'
+          >
+            В корзину
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>ArtPhone</h3>
+            <p>Официальный магазин iPhone в России</p>
+            <p>г. Москва, ул. Тверская, д. 25</p>
+          </div>
+          <div class="footer-links">
+            <h4>Меню</h4>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Контакты</h4>
+            <p>+7 (495) 123-45-67</p>
+            <p>info@artphone.ru</p>
+            <p>Пн-Вс: 10:00 - 21:00</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Магазин iPhone "ArtPhone". Все права защищены</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
